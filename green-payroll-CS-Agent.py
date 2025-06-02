@@ -5,7 +5,7 @@ st.set_page_config(page_title="Green Payroll Chatbot Demo", layout="centered")
 
 st.title("💬 Green Payroll AI Chatbot Demo")
 st.markdown("""
-Welcome to the Green Payroll Virtual CS Agent demo. This is an Example of a ChatBot that could be added to your website
+Welcome to the Green Payroll Virtual CS Agent demo. This is an example of a ChatBot that could be added to your website.  
 Use this tool to experience real-time conversation about our payroll solutions, HR automation, and compliance services.
 """)
 
@@ -17,8 +17,8 @@ html_code = """
 </div>
 """
 
-# Inject raw HTML
-components.html(html_code, height=300)
+# Inject raw HTML with increased height
+components.html(html_code, height=600)
 
 st.markdown("---")
 st.subheader("🤖 What's This Demo For?")
