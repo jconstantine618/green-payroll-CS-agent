@@ -12,15 +12,15 @@ Welcome to the **Green Payroll Virtual CS Agent** demo.
 This is an example of a chatbot that could be embedded on your website to support customers in real time.
 
 Use it to:
-- Answer common HR and payroll questions  
-- Assist with employee onboarding  
+- Answer common HR and payroll questions
+- Assist with employee onboarding
 - Offer automated compliance guidance
 """)
 
-# Customer Service Widget
 cs_widget = """
 <div style="margin-top: 20px;">
     <elevenlabs-convai agent-id="agent_01jwscd0k4f78sy282bk6ya0rm"></elevenlabs-convai>
+    <script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
 </div>
 """
 
@@ -32,7 +32,7 @@ st.markdown("---")
 st.header("📞 Demo Sales Prospect Chatbot")
 st.markdown("""
 This is a **Sales Prospect Simulation Bot**.  
-Call this AI agent and **practice your sales pitch** - they act as a **busy, skeptical decision-maker**.  
+Call this AI agent and **practice your sales pitch** — they act as a **busy, skeptical decision-maker**.  
 If you can't clearly articulate value quickly, they will tell you they’re not interested.
 
 Great for:
