@@ -12,38 +12,27 @@ Welcome to the Green Payroll AI demo. This page showcases two live voice chatbot
 - 📞 Simulated Sales Prospect for pitch practice
 """)
 
-# First chatbot: Customer Service — now includes the required <script>
-st.header("👩‍💼 Virtual Customer Service Agent")
-st.markdown("""
-This chatbot helps users get support with HR, payroll, onboarding, and compliance questions.
-""")
-
-cs_widget = """
-<div style="margin-top: 10px;">
-    <elevenlabs-convai agent-id="agent_01jwscd0k4f78sy282bk6ya0rm"></elevenlabs-convai>
-    <script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
+# Render both widgets in a single HTML block
+html_code = """
+<div style="margin-bottom: 40px;">
+  <h3>👩‍💼 Virtual Customer Service Agent</h3>
+  <p>This chatbot helps users get support with HR, payroll, onboarding, and compliance questions.</p>
+  <elevenlabs-convai agent-id="agent_01jwscd0k4f78sy282bk6ya0rm"></elevenlabs-convai>
 </div>
+
+<hr style="margin: 40px 0;">
+
+<div>
+  <h3>📞 Demo Sales Prospect Chatbot</h3>
+  <p>This voice AI simulates a busy decision-maker. You’ll need to pitch quickly and clearly — or they’ll end the call.<br>
+  Great for cold call practice and objection handling.</p>
+  <elevenlabs-convai agent-id="agent_01jwtqnwg7f8qtq0vg6yphp1jv"></elevenlabs-convai>
+</div>
+
+<script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
 """
 
-components.html(cs_widget, height=300)
-
-# Divider between chatbots
-st.markdown("---")
-
-# Second chatbot: Sales Prospect — no need to load the script again
-st.header("📞 Demo Sales Prospect Chatbot")
-st.markdown("""
-This voice AI simulates a busy decision-maker. You’ll need to pitch quickly and clearly — or they’ll end the call.  
-Great for cold call practice and objection handling.
-""")
-
-sales_widget = """
-<div style="margin-top: 10px;">
-    <elevenlabs-convai agent-id="agent_01jwtqnwg7f8qtq0vg6yphp1jv"></elevenlabs-convai>
-</div>
-"""
-
-components.html(sales_widget, height=300)
+components.html(html_code, height=700)
 
 # Footer
 st.markdown("---")
